@@ -18,8 +18,6 @@ public class Controller {
   void setPerson() {
     person1.name = "John";
     person2.name = "Bill";
-    person1.increaseCounter();
-    person1.increaseCounter();
   }
   
   //=========================================================================================================
@@ -27,9 +25,7 @@ public class Controller {
   //=========================================================================================================
   @RequestMapping("getPersonName")
   String getPerson() {
-    person1.counter++;
-    //return person1.increaseCounter() + ":" + person1.name + " - " + person2.name;
-    return person1.counter + ":" + person1.name + " - " + person2.name;
+    return person1.increaseCounter() + ":" + person1.name + " - " + person2.name;
   }
 
 }
